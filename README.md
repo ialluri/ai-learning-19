@@ -2,6 +2,6 @@
 
 The repository comprises of some of the project work from my ai-program
 
-# Assigments
+## Assigments
 
 - Module-5 Submission
