@@ -13,6 +13,7 @@ We have one dataset `/data/coupons.csv`.
 - Fields that have null values are `car`, `Bar`, `CoffeeHouse`, `CarryAway`, `RestaurantLessThan20`,
   `Restaurant20To50`.
 - Simply Occupation into four groups: Umemployed, Student, Retired, Employed
+- Split income into two columns (low and high) and convert string values to numerical ranges
 
 ### Fields not considered
 
@@ -111,7 +112,28 @@ less_than_25_bar_goers = df_25_less['Bar'].shape[0]
 
 ### The acceptance rate between drivers who go to bars more than once a month and had passengers that were not a kid and had occupations other than farming, fishing, or forestry.
 
-Ration in %: `3.58%`
+Ratio in %: `3.58%`
 
 1. Count the number of rows where Y='1', Bar is not in ('less1', 'never')
 2. Across full dataset where passenger not Kid(s) and accupation is not in farming, fishing and forestry
+
+### Compare the acceptance rates between those drivers who:
+
+- go to bars more than once a month, had passengers that were not a kid, and were not widowed _OR_
+
+`35` Rows where Passanger is not a Kid and Not widows
+
+- go to bars more than once a month and are under the age of 30 _OR_
+
+`219` Rows where under 30 age wnet to a bar more than once
+
+- go to cheap restaurants more than 4 times a month and income is less than 50K.
+
+`1608` rows who went to cheap restaurants more than 4 times with < 50K income
+
+## Hypothsis of drivers who accepted the bar coupons
+
+- Very small percentage of bar goers accept coupons.
+- 64% of Bar coupon recipents have visted bar 3 or few times.
+  Most bar goes do not have kids and are
+- Most people who go the bar are above 25 years of change
